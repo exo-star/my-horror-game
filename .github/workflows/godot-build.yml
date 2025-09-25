@@ -1,20 +1,22 @@
 name: Godot Android Export
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   export-android:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Godot
+      - name: Unzip game
+        run: |
+          unzip game.zip -d game
+          ls -R game
+
+      - name: Export with Godot
         uses: firebelley/godot-export@v5.2.0
         with:
-          godot-version: 4.1.1
-          export-type: Android
-          output-path: build/my-game.apk
+          relative_project_path: game
+          use_preset_export_path: true
