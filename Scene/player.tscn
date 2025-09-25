@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3qwd0x64t33j"]
+
+[ext_resource type="Script" uid="uid://bdh1a8jrotacs" path="res://Script/player.gd" id="1_kelma"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j47wa"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kelma"]
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_kelma")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_j47wa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_kelma")
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.363379, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.663272, 0.724516, 0.795723)
+
+[node name="Camera3D" type="Camera3D" parent="Pivot/SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 0.965872, 0.259021, 0, -0.259021, 0.965872, -0.535913, 0.0224012, 0.321786)
+
+[node name="GroundRay" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38429, 0)
+target_position = Vector3(0, -2, 0)

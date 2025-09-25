@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://klwyfk7w42t"
+path="res://.godot/imported/stone_pillar.obj-8aae4369fff7acd9109d7c8a30ff0983.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stone_pillar.obj-8aae4369fff7acd9109d7c8a30ff0983.mesh"]
+
+source_file="res://asssect/stone_pillar/stone_pillar.obj"
+dest_files=["res://.godot/imported/stone_pillar.obj-8aae4369fff7acd9109d7c8a30ff0983.mesh", "res://.godot/imported/stone_pillar.obj-8aae4369fff7acd9109d7c8a30ff0983.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

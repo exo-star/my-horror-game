@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp8ij3u83nqun"]
+
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="1_0apqc"]
+[ext_resource type="Texture2D" uid="uid://fevlg5154sg6" path="res://icon.svg" id="2_i7jdr"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Virtual Joystick" parent="Control" instance=ExtResource("1_0apqc")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -10.0
+offset_top = 274.0
+offset_right = 290.0
+offset_bottom = 574.0
+grow_horizontal = 2
+
+[node name="jump" type="TextureButton" parent="Control/Virtual Joystick"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 553.0
+offset_top = -225.0
+offset_right = 681.0
+offset_bottom = -97.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("2_i7jdr")
