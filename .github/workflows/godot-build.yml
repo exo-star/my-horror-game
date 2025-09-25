@@ -12,9 +12,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Godot Android Export
+      - name: Setup Godot
         uses: firebelley/godot-export@v5.2.0
         with:
-          version: 4.1.1
+          godot-version: 4.1.1
           export-type: Android
-          export-path: build/my-game.apk
+          output-path: build/my-game.apk
