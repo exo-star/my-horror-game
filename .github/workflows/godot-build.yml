@@ -10,13 +10,15 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Unzip game
-        run: |
-          unzip game.zip -d game
-          ls -R game
-
-      - name: Export with Godot
+      - name: Set up Godot
         uses: firebelley/godot-export@v5.2.0
         with:
-          relative_project_path: game
+          relative_project_path: .
           use_preset_export_path: true
+          export_as_pack: false
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-horror-game
+          path: build.apk
