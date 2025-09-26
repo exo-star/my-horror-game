@@ -16,8 +16,7 @@ jobs:
           godot-version: 4.2.1
           export-preset: "Android"
           relative-project-path: .
-          use-preset-export-path: true
-          export-as-pack: false
+          output-path: build.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
