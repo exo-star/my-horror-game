@@ -13,9 +13,11 @@ jobs:
       - name: Set up Godot
         uses: firebelley/godot-export@v5.2.0
         with:
-          relative_project_path: .
-          use_preset_export_path: true
-          export_as_pack: false
+          godot-version: 4.2.1
+          export-preset: "Android"
+          relative-project-path: .
+          use-preset-export-path: true
+          export-as-pack: false
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
